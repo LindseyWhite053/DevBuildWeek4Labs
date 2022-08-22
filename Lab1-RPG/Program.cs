@@ -7,13 +7,13 @@ gameCharacters.Add(first);
 Warrior second = new Warrior("Jon Snow the Crow", 18, 16, "Sword");
 gameCharacters.Add(second);
 
-Wizard third = new Wizard("Sylvanas the Dark", 10, 18, 30, 20);
+Wizard third = new Wizard("Sylvanas the Dark", 10, 18, 30, 5);
 gameCharacters.Add(third);
 
-Wizard fourth = new Wizard("Lillith Hightower", 13, 20, 25, 20);
+Wizard fourth = new Wizard("Lillith Hightower", 13, 20, 25, 3);
 gameCharacters.Add(fourth);
 
-Wizard fifth = new Wizard("Kargath the Wise", 12, 18, 38, 18);
+Wizard fifth = new Wizard("Kargath the Wise", 12, 18, 38, 4);
 gameCharacters.Add(fifth);
 
 
@@ -37,7 +37,7 @@ class GameCharacter
 
     public virtual void Play()
     {
-        Console.WriteLine($"You are playing the game as {Name}, Strength: {Strength}, Intelligence: {Intelligence}");
+        Console.WriteLine($"You are playing the game as {Name} (Strength: {Strength}, Intelligence: {Intelligence})");
     }
 }
 
@@ -51,9 +51,9 @@ class MagicUsingCharacter : GameCharacter
         MagicalEnergy = _MagicalEnergy;
     }
 
-    public virtual void Play()
+    public override void Play()
     {
-        Console.WriteLine($"You are playing the game as {Name}, Strength: {Strength}, Intelligence: {Intelligence}, Magical Energy {MagicalEnergy}");
+        Console.WriteLine($"You are playing the game as {Name} (Strength: {Strength}, Intelligence: {Intelligence}, Magical Energy {MagicalEnergy})");
     }
 
 }
@@ -70,7 +70,7 @@ class Wizard : MagicUsingCharacter
 
     public override void Play()
     {
-        Console.WriteLine($"Your playing the game as {Name}, Strength: {Strength}, Intelligence: {Intelligence}, Magical Energy {MagicalEnergy}, SpellNumber {SpellNumber}");
+        Console.WriteLine($"Your playing the game as {Name} (Strength: {Strength}, Intelligence: {Intelligence}, Magical Energy {MagicalEnergy}) {SpellNumber} Spells");
     }
 }
 
@@ -86,6 +86,6 @@ class Warrior: GameCharacter
 
     public override void Play()
     {
-        Console.WriteLine($"You are playing the game as {Name}, Strength: {Strength}, Intelligence: {Intelligence}, Weapon Type: {WeaponType}");
+        Console.WriteLine($"You are playing the game as {Name} (Strength: {Strength}, Intelligence: {Intelligence}) Weapon Type: {WeaponType}");
     }
 }
