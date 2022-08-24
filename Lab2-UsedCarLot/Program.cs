@@ -30,11 +30,11 @@ while (true)
 
 static void Init(List<Car> theList)
 {
-    Car car1 = new Car("Mitsubishi", "Canter FE125", 2012, 30000);
+    Car car1 = new Car("Mitsubishi", "Canter FE125", 2022, 30000);
     theList.Add(car1);
-    Car car2 = new Car("Suzuki", "Vitara", 2004, 26490);
+    Car car2 = new Car("Suzuki", "Vitara", 2022, 26490);
     theList.Add(car2);
-    Car car3 = new Car("Lexus", "NX300H", 2015, 40000);
+    Car car3 = new Car("Lexus", "NX300H", 2022, 40000);
     theList.Add(car3);
     UsedCar car4 = new UsedCar("Chevrolet", "SILVERADO 3500", 2006, 53480, 86890);
     theList.Add(car4);
